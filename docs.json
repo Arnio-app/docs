@@ -4,8 +4,8 @@
   "name": "Replyblue",
   "colors": {
     "primary": "#2569ED",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "light": "#2569ED",
+    "dark": "#2569ED"
   },
   "favicon": "/favicon.svg",
   "navigation": {
