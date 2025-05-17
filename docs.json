@@ -58,8 +58,8 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "anchor": "X",
+          "href": "https://x.com/replybluehq",
           "icon": "book-open-cover"
         },
         {
@@ -94,7 +94,7 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/replyblue",
+      "x": "https://x.com/replybluehq",
       "github": "https://github.com/replyblue",
       "linkedin": "https://linkedin.com/company/replyblue",
       "instagram": "https://www.instagram.com/replybluehq/"
