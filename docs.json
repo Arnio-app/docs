@@ -1,9 +1,9 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Replyblue",
   "colors": {
-    "primary": "#16A34A",
+    "primary": "#2569ED",
     "light": "#07C983",
     "dark": "#15803D"
   },
