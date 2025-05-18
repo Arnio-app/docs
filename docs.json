@@ -36,13 +36,14 @@
           {
             "group": "Sales Training",
             "pages": [
-              "core-messaging-strategies",
-              "intro-scripts",
-              "objection-handling",
-              "quality-framework",
-              "ai-in-conversations",
-              "ai-response-handoff",
-              "imessage-vs-sms"
+              "sales-training/messaging",
+              "sales-training/scripts",
+              "sales-training/objections",
+              "sales-training/qualification",
+              "sales-training/ai-chat",
+              "sales-training/ai-handoff-rules",
+              "sales-training/imessage-sms"
+            
              
 
             ]
