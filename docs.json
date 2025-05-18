@@ -17,20 +17,43 @@
             "group": "Get Started",
             "pages": [
               "index",
+              "introduction",
               "quickstart"
+            
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Core Concepts",
             "pages": [
               "essentials/markdown",
               "essentials/code",
               "essentials/images",
               "essentials/settings",
               "essentials/navigation",
-              "essentials/reusable-snippets"
+              "essentials/reusable-snippets",
+              "integrations",
+              "ai-automation",
+              "analytics-overview",
+              "dashboard-navigation"
+
+            ]
+          },
+
+          {
+            "group": "Sales Training",
+            "pages": [
+              "core-messaging-strategies",
+              "intro-scripts",
+              "objection-handling",
+              "quality-framework",
+              "ai-in-conversations",
+              "ai-response-handoff",
+              "imessage-vs-sms"
+             
+
             ]
           }
+          
         ]
       },
       {
