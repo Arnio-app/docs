@@ -31,10 +31,10 @@
               "essentials/settings",
               "essentials/navigation",
               "essentials/reusable-snippets",
-              "integrations",
-              "ai-automation",
-              "analytics-overview",
-              "dashboard-navigation"
+              "core-concepts/integrations",
+              "core-concepts/ai-automation",
+              "core-concepts/analytics-overview",
+              "core-concepts/dashboard-navigation"
 
             ]
           },
