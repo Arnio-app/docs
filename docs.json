@@ -27,8 +27,8 @@
             "pages": [
               "core-concepts/integrations",
               "core-concepts/ai-automation",
-              "core-concepts/analytics-overview",
-              "core-concepts/dashboard-navigation"
+              "core-concepts/analytics",
+              "core-concepts/dashboard"
 
             ]
           },
