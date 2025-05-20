@@ -69,6 +69,18 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Changelog",
+        "groups": [
+          {
+            "group": "Product Updates",
+            "pages": [
+              "product-updates/change"
+            ]
+          }
+          
+        ]
       }
     ],
     "global": {
