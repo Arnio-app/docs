@@ -1,30 +1,75 @@
 ---
-title: 'AI Setup'
-description: 'Guide to enabling AI Replies, configuring response windows and training prompts'
-icon: 'microchip-ai'
+title: "AI Setup"
+description: "Guide to enabling AI Replies, configuring response windows and training prompts"
+icon: "microchip-ai"
 ---
 
-# Web Editor
+# How to setup your AI
 
-> Build your documentation using the Mintlify web editor
+> Replyblue's AI assistant helps you qualify leads, reply to inbound texts, and automate follow-ups — just like a real rep.
 
-<img className="block dark:hidden my-0 pointer-events-none" src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/editor-light.png" alt="Mintlify Web Editor interface in light mode" />
+<img
+  className="block dark:hidden my-0 pointer-events-none"
+  src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/editor-light.png"
+  alt="Mintlify Web Editor interface in light mode"
+/>
 
-<img className="hidden dark:block my-0 pointer-events-none" src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/editor-dark.png" alt="Mintlify Web Editor interface in dark mode" />
+<img
+  className="hidden dark:block my-0 pointer-events-none"
+  src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/editor-dark.png"
+  alt="Mintlify Web Editor interface in dark mode"
+/>
 
-## Introduction
+## Step 1: Enable AI Replies
 
-The web editor is a visual interface for creating, editing, and reviewing documentation directly in your browser.
+- When adding a new contact, you can enable AI by toggling the **“Enable AI”** switch during creation.
 
-The web editor offers a **What-You-See-Is-What-You-Get (WYSIWYG)** experience while maintaining synchronization with your Git repository, which lets you see updates in real time and collaborate with your team on documentation changes.
+For existing contacts, open the conversation thread, click the slider icon on the top right to view contact details, and toggle **“Enable AI”** from there.
 
-### Web editor vs. CLI
+Once enabled, your AI will begin responding to new inbound messages automatically.
 
-The web editor lets you write and edit your documentation in your browser without requiring local development tools or using the command line. You should use the web editor if you want to maintain your documentation in one place with one tool.
+![Hero Light Pn](/images/hero-light.png)
 
-The CLI is a command line tool that allows you to create and manage your documentation locally using the IDE of your choice. You should use the CLI if you want to integrate documentation into your existing development workflow.
+<Tip>
+  You can disable AI at any time on a per-thread basis.
+</Tip>
 
-Both the web editor and CLI are fully integrated with your Git repository, so you can use them interchangeably and different members of your team can use either tool based on their preferences.
+## Step 2: Configure Response Behavior
+
+- Go to the Automation tab in your dashboard.
+- You'll see **AI Reply Time:**
+  - **Response Delay (in mintues)**  
+
+      Simulates real human typing speed. We recommend 2-3 mins.
+
+  ![Hero Light Pn](/images/hero-light.png)
+
+## Step 3: Train Your AI with Prompts
+
+Replyblue uses dynamic prompt training to make your AI sound like you.
+
+**To set it up:**
+
+1. 1. Navigate to **AI Prompt Trainer** (inside Settings or Tools tab).
+2. 2. Fill out the**fields:** 
+   - **Our Company Description** – e.g. "We help auto dealers sell more vehicles via text"
+   - **Common Questions Customers Ask** – e.g. "What’s the price?", "Is this still available?", "Can I come see it today?"
+   -  **How You Want the AI to Respond** – tone, format, length, escalation rules
+3.  Click **“Submit”** to apply the updates instantly.
+
+   <Tip>
+     The more detailed your prompts, the more natural your AI becomes.
+   </Tip>
+
+### ⚙️ Optional: Set Hand off Rules
+
+You can define when the AI should **stop replying** and notify a human. Example conditions:
+
+- When the lead asks to talk to a person  
+
+- When the conversation includes certain keywords (e.g., “call me” or “speak to someone”)  
+
+- After the AI has replied 3 times and no response
 
 ## Editor Modes
 
@@ -33,9 +78,17 @@ The web editor offers two modes to accommodate different editing preferences and
 You can switch between natural modes at any time using the toggle in the top right corner of the editor toolbar.
 
 <Frame>
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/mode-toggle-light.png" alt="Mode toggle icons highlighted in the Mintlify web editor" className="block dark:hidden" />
+  <img
+    src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/mode-toggle-light.png"
+    alt="Mode toggle icons highlighted in the Mintlify web editor"
+    className="block dark:hidden"
+  />
 
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/mode-toggle-dark.png" alt="Mode toggle icons highlighted in the Mintlify web editor" className="hidden dark:block" />
+  <img
+    src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/mode-toggle-dark.png"
+    alt="Mode toggle icons highlighted in the Mintlify web editor"
+    className="hidden dark:block"
+  />
 </Frame>
 
 ### Visual Mode
@@ -43,9 +96,17 @@ You can switch between natural modes at any time using the toggle in the top rig
 Visual mode provides a WYSIWYG experience where the changes that you make in the editor are the changes that will be published to your documentation site. This mode is ideal for when you want to see how your changes will look in real-time.
 
 <Frame>
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/visual-mode-light.png" alt="Visual editing mode in the Mintlify web editor" className="block dark:hidden" />
+  <img
+    src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/visual-mode-light.png"
+    alt="Visual editing mode in the Mintlify web editor"
+    className="block dark:hidden"
+  />
 
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/visual-mode-dark.png" alt="Visual editing mode in the Mintlify web editor" className="hidden dark:block" />
+  <img
+    src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/visual-mode-dark.png"
+    alt="Visual editing mode in the Mintlify web editor"
+    className="hidden dark:block"
+  />
 </Frame>
 
 #### Component Menu
@@ -56,9 +117,17 @@ You can add content blocks and other components to your documentation in visual 
 2. Select a component from the menu.
 
 <Frame>
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/component-menu-light.png" alt="The unfurled component menu emphasized in the Mintlify web editor" className="block dark:hidden" />
+  <img
+    src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/component-menu-light.png"
+    alt="The unfurled component menu emphasized in the Mintlify web editor"
+    className="block dark:hidden"
+  />
 
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/component-menu-dark.png" alt="The unfurled component menu emphasized in the Mintlify web editor" className="hidden dark:block" />
+  <img
+    src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/component-menu-dark.png"
+    alt="The unfurled component menu emphasized in the Mintlify web editor"
+    className="hidden dark:block"
+  />
 </Frame>
 
 ### Markdown Mode
@@ -66,9 +135,17 @@ You can add content blocks and other components to your documentation in visual 
 Markdown mode provides direct access to the underlying MDX code of your documentation. This mode is preferable when you need precise control over component properties or when you prefer to write in Markdown/MDX syntax.
 
 <Frame>
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/markdown-mode-light.png" alt="Markdown mode in the Mintlify web editor" className="block dark:hidden" />
+  <img
+    src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/markdown-mode-light.png"
+    alt="Markdown mode in the Mintlify web editor"
+    className="block dark:hidden"
+  />
 
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/markdown-mode-dark.png" alt="Markdown mode in the Mintlify Web Editor" className="hidden dark:block" />
+  <img
+    src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/markdown-mode-dark.png"
+    alt="Markdown mode in the Mintlify Web Editor"
+    className="hidden dark:block"
+  />
 </Frame>
 
 ## Making Changes
@@ -89,9 +166,17 @@ When you're ready to make your changes live, click the **Publish** button in the
 Your changes will be deployed to your production site immediately.
 
 <Frame>
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/publish-flow-light.png" alt="The publish button emphasized in the Mintlify web editor" className="block dark:hidden" />
+  <img
+    src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/publish-flow-light.png"
+    alt="The publish button emphasized in the Mintlify web editor"
+    className="block dark:hidden"
+  />
 
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/publish-flow-dark.png" alt="The publish button emphasized in the Mintlify web editor" className="hidden dark:block" />
+  <img
+    src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/publish-flow-dark.png"
+    alt="The publish button emphasized in the Mintlify web editor"
+    className="hidden dark:block"
+  />
 </Frame>
 
 ## Branches
@@ -132,9 +217,17 @@ Pull requests (or PRs) let you and other people review changes that you've made 
 4. Click **Publish Pull Request**.
 
 <Frame>
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/pull-request-light.png" alt="Publish pull request button emphasized in the Mintlify web editor" className="block dark:hidden" />
+  <img
+    src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/pull-request-light.png"
+    alt="Publish pull request button emphasized in the Mintlify web editor"
+    className="block dark:hidden"
+  />
 
-  <img src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/pull-request-dark.png" alt="Publish pull request button emphasized in the Mintlify web editor" className="hidden dark:block" />
+  <img
+    src="https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/editor/pull-request-dark.png"
+    alt="Publish pull request button emphasized in the Mintlify web editor"
+    className="hidden dark:block"
+  />
 </Frame>
 
 ### Reviewing Pull Requests
@@ -151,15 +244,11 @@ The web editor integrates with your Git repository, ensuring that all changes ar
 
 ### How Git Sync Works
 
-* **Authentication**: The web editor connects to your Git repository through our [GitHub App](/settings/github) or [GitLab integration](/settings/gitlab).
-
-* **Automatic fetching**: When you open the editor, it automatically fetches the latest content from your repository's main branch.
-
-* **Change tracking**: As you make edits, the web editor tracks changes and can commit them to your repository.
-
-* **Branching**: You can make changes directly to your main branch or to a separate branch, depending on your workflow preferences.
-
-* **Pull requests**: For collaborative workflows, you can create pull requests from the web editor.
+- **Authentication**: The web editor connects to your Git repository through our [GitHub App](/settings/github) or [GitLab integration](/settings/gitlab).
+- **Automatic fetching**: When you open the editor, it automatically fetches the latest content from your repository's main branch.
+- **Change tracking**: As you make edits, the web editor tracks changes and can commit them to your repository.
+- **Branching**: You can make changes directly to your main branch or to a separate branch, depending on your workflow preferences.
+- **Pull requests**: For collaborative workflows, you can create pull requests from the web editor.
 
 ## Git Terminology
 
@@ -169,19 +258,15 @@ Understanding the following terms can help you work more effectively with the we
   <Accordion title="Repository">
     A repository (or repo) is where your documentation files are stored, along with their revision history. The web editor connects to your Git repository to fetch and store documentation content.
   </Accordion>
-
   <Accordion title="Commit">
     A commit is a snapshot of changes to your documentation at a specific point in time. When you publish changes in the web editor, you're creating a commit in your Git repository.
   </Accordion>
-
   <Accordion title="Branch">
     A branch is a parallel version of your documentation that allows you to work on changes without affecting the main version. The web editor allows you to create and switch between branches.
   </Accordion>
-
   <Accordion title="Pull Request">
     A pull request (or PR) is a proposal to merge changes from one branch into another, typically from a feature branch into the main branch. PRs facilitate review and discussion before changes are incorporated.
   </Accordion>
-
   <Accordion title="Diff">
     A diff (or difference) shows the specific changes between two versions of a file. When reviewing pull requests, diffs highlight what has been added, removed, or modified.
   </Accordion>
@@ -195,21 +280,20 @@ Here are solutions to common issues you might encounter with the web editor.
   <Accordion title="Changes Not Appearing After Publishing">
     **Possible causes:**
 
-    * Deployment is still in progress
-    * Caching issues in your browser
+    - Deployment is still in progress
+    - Caching issues in your browser
 
     **Solutions:**
 
     1. Check deployment status in your Mintlify Dashboard.
-    2. Try hard refreshing your browser (Ctrl+F5 or Cmd+Shift+R).
+    2. Try hard refreshing your browser (Ctrl\+F5 or Cmd\+Shift\+R).
     3. Clear your browser cache.
   </Accordion>
-
   <Accordion title="Permission Errors When Publishing">
     **Possible causes:**
 
-    * Insufficient permissions to the Git repository
-    * Authentication issues with your Git provider
+    - Insufficient permissions to the Git repository
+    - Authentication issues with your Git provider
 
     **Solutions:**
 
@@ -217,12 +301,11 @@ Here are solutions to common issues you might encounter with the web editor.
     2. Check if your Git integration is properly configured.
     3. Review the [Editor Permissions](/advanced/dashboard/permissions) documentation.
   </Accordion>
-
   <Accordion title="Editor Loading Issues">
     **Possible causes:**
 
-    * Network connectivity problems
-    * Large documentation repositories
+    - Network connectivity problems
+    - Large documentation repositories
 
     **Solutions:**
 
