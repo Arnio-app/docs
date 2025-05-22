@@ -1,16 +1,20 @@
 ---
-title: 'Replyblue Dashboard'
-description: 'Explore key tabs in Replyblue dashboard: Conversation, Automation, Settings, and Usage'
-icon: 'display'
+title: "Replyblue Dashboard"
+description: "Explore key tabs in Replyblue dashboard: Conversation, Automation, Settings, and Usage"
+icon: "display"
 ---
 
-# AWS Route 53 and Cloudfront
+# Navigating the Dashboard
 
-> Host documentation at a /docs subdirectory using AWS services
+## <Icon isNewlyCreated={true} />  Conversation Tab
 
-## Create Cloudfront Distribution
+Track and manage all leads conversations in real time.
 
-Navigate to [Cloudfront](https://aws.amazon.com/cloudfront) inside the AWS console and click on `Create distribution`
+- View incoming and outgoing messages
+- Filter by lead status, rep or time frame
+- Click into a thread to view message history
+
+![Hero Dark Pn](/images/hero-dark.png)
 
 <Frame>
   ![Cloudfront Create Distribution](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/create-distribution.png)
@@ -18,7 +22,9 @@ Navigate to [Cloudfront](https://aws.amazon.com/cloudfront) inside the AWS conso
 
 For the Origin domain, input `[SUBDOMAIN].mintlify.dev` where `[SUBDOMAIN]` is the project's unique subdomain. Click on `Use: [SUBDOMAIN].mintlify.dev`
 
-<Frame>![Cloudfront Origin name](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/origin-name.png)</Frame>
+<Frame>
+  ![Cloudfront Origin name](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/origin-name.png)
+</Frame>
 
 For **Cache key and origin requests**, select `Caching Optimized`.
 
@@ -30,7 +36,7 @@ And for **Web Application Firewall (WAF)**, enable security protections
 
 <Frame>
   ![Cloudfront Caching
-  policy](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/enable-security-protections.png)
+policy](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/enable-security-protections.png)
 </Frame>
 
 The remaining settings should be default. Click `Create distribution`.
@@ -39,7 +45,9 @@ The remaining settings should be default. Click `Create distribution`.
 
 After creating the distribution, navigate to the `Origins` tab.
 
-<Frame>![Cloudfront Origins](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/origins.png)</Frame>
+<Frame>
+  ![Cloudfront Origins](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/origins.png)
+</Frame>
 
 We want to find a staging URL that mirrors where the main domain (example.com). This is highly variant depending on how your landing page is hosted.
 
@@ -67,8 +75,8 @@ By this point, you should have two Origins - one with `[SUBDOMAIN].mintlify.app`
 
 Behaviors in Cloudfront enables control over the subpath logic. At a high level, we're looking to create the following logic.
 
-* **If a user lands on /docs**, go to `[SUBDOMAIN].mintlify.dev`
-* **If a user lands on any other page**, go the current landing page
+- **If a user lands on /docs**, go to `[SUBDOMAIN].mintlify.dev`
+- **If a user lands on any other page**, go the current landing page
 
 We're going to create three behaviors by clicking on the `Create behavior` button.
 
@@ -76,7 +84,9 @@ We're going to create three behaviors by clicking on the `Create behavior` butto
 
 The first behavior should have a **Path pattern** of `/docs/*` with **Origin and origin groups** pointing to the `.mintlify.dev` URL (in our case `acme.mintlify.dev`)
 
-<Frame>![Cloudfront Behavior 1](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/behavior-1.png)</Frame>
+<Frame>
+  ![Cloudfront Behavior 1](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/behavior-1.png)
+</Frame>
 
 For **Cache policy**, select `CachingOptimized` and create behavior.
 
@@ -84,7 +94,9 @@ For **Cache policy**, select `CachingOptimized` and create behavior.
 
 The second behavior should be the same as the first one but with a **Path pattern** of `/docs` and **Origin and origin groups** pointing to the same `.mintlify.dev` URL.
 
-<Frame>![Cloudfront Behavior 2](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/behavior-2.png)</Frame>
+<Frame>
+  ![Cloudfront Behavior 2](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/behavior-2.png)
+</Frame>
 
 ### `Default (*)`
 
@@ -108,7 +120,7 @@ You can now test if your distribution is set up properly by going to the `Genera
 
 <Frame>
   ![Cloudfront Preview
-  distribution](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/preview-distribution.png)
+distribution](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/preview-distribution.png)
 </Frame>
 
 All pages should be directing to your main landing page, but if you append `/docs` to the URL, you should see it going to the Mintlify documentation instance.
@@ -141,4 +153,4 @@ Click `Create records`.
   You may need to remove the existing A record if one currently exists.
 </Note>
 
-And voila! You should be able to have your documentation served at `/docs` for your primary domain.
+And voila\! You should be able to have your documentation served at `/docs` for your primary domain.
