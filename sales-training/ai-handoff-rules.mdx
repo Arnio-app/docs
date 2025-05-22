@@ -1,5 +1,25 @@
 ---
-title: 'AI Handoff Rules'
-description: 'Guide to enabling AI Replies, configuring response windows and training prompts'
-icon: 'handshake-simple'
+title: "AI Handoff Rules"
+description: "Guide to enabling AI Replies, configuring response windows and training prompts"
+icon: "handshake-simple"
 ---
+
+## <Icon icon="shuffle" />  AI Handoff Rules
+
+**Definition:** Handoff rules determine when the AI stops responding and transfers the conversation to a human.
+
+### Common Handoff Triggers
+
+- Lead requests a human (e.g. "Can I speak to someone?")
+- AI receives a response it doesn't understand after 2 attempts
+- Lead meets qualification thresholds (e.g. high intent)
+
+### Customizing Handoff Logic
+
+- Set intent detection for escalation phrases
+- Define confidence thresholds for fallback handling
+- Route to specific reps based on team/region/specialty
+
+### Handoff Tagging
+
+- Tag conversations as `handoff-ai`, `qualified`, or `needs-review` for CRM visibility
