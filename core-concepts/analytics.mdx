@@ -10,107 +10,79 @@ icon: "chart-line"
 >
 > \> Navigate to **Analytics** in the left sidebar of your Replyblue dashboard.
 
-## <Icon icon="reply" /> Response Rate
+## <Icon icon="reply" />  Response Rate
 
 **Definition:** The percentage of messages that received a response (from the lead or from your AI/human team).
 
 - Split by **iMessage** and **SMS**
-
 - Use the graph to view response trends across days
-
 - Hover to view exact percentages for each day
-
 - Split by **iMessage** and **SMS**
-
 - Use the graph to view response trends across days
-
 - Hover to view exact percentages for each day
 
-![Screenshot2025 05 21at2 01 47PM Pn](/images/Screenshot2025-05-21at2.01.47PM.png)
+![Screenshot2025 05 21at7 19 48PM Pn](/images/Screenshot2025-05-21at7.19.48PM.png)
 
-## <Icon icon="phone" /> Total Conversations 
+## <Icon icon="phone" /> Total Conversations
 
 Shows how many new conversations were initiated during the selected time range.
 
 - Compare performance with previous periods
 - Helps identify campaign engagement or drop-off
 
-<Frame>
-  <img
-    src="/Screenshot2025-05-21at2.03.54PM.png"
-    alt="Cloudfront Origins"
-    title=""
-    style={{ width:"82%" }}
-  />
-</Frame>
+![Screenshot2025 05 21at2 03 54PM Pn](/Screenshot2025-05-21at2.03.54PM.png)
 
-
-## <Icon icon="clock-two" /> Average Time to Response
+## <Icon icon="clock-two" />  Average Time to Response
 
 This metric tracks how long it takes your AI or team to respond to incoming messages.
 
 - Lower is better (especially for first-touch replies)
+- Helps you optimize response windows and AI timing
 
-- Helps you optimize response windows and AI timingFor **Cache policy**, select `CachingOptimized` and create behavior.
+![Screenshot2025 05 21at2 07 11PM Pn](/images/Screenshot2025-05-21at2.07.11PM.png)
 
-### `/docs`
+## <Icon icon="chart-line" />  Pickup Rate _(Coming Soon)_
 
-The second behavior should be the same as the first one but with a **Path pattern** of `/docs` and **Origin and origin groups** pointing to the same `.mintlify.dev` URL.
+The percentage of conversations that continued after the first reply.
 
-<Frame>
-  ![Cloudfront Behavior 2](https://mintlify.s3.us-west-1.amazonaws.com/mintlify/images/cloudfront/behavior-2.png)
-</Frame>
+- Indicates how effective your opener and follow-up strategy is)
+- Influenced by message timing, personalization, and offer quality
 
-### `Default (*)`
+![Screenshot2025 05 21at7 10 16PM Pn](/images/Screenshot2025-05-21at7.10.16PM.png)
 
-Lastly, we're going to edit the `Default (*)` behavior.
+## <Icon icon="clock-two" /> Speed to Dial _(Coming Soon)_
 
-<Frame>
-  
-</Frame>
+Tracks the time between lead inquiry and your team dialing them (if applicable).
 
-We're going to change the default behavior's **Origin and origin groups** to the staging URL (in our case `mintlify-landing-page.vercel.app`).
+- Helps sales teams optimize handoff and follow-up actions
+- Lower times correlate with higher close rates
 
-<Frame>
-  
-</Frame>
+![Screenshot2025 05 21at7 16 58PM Pn](/images/Screenshot2025-05-21at7.16.58PM.png)
 
-Click on `Save changes`.
+## <Icon icon="clock-two" /> Number of Calls _(Coming Soon)_
 
-## Preview Distribution
+Tracks how many calls were made from within the platform (if calling is enabled).
 
-You can now test if your distribution is set up properly by going to the `General` tab and visiting the **Distribution domain name** URL.
+- Use this to gauge outbound activity
+- Combine with Speed to Dial for context
 
-<Frame>
-  
-</Frame>
+![Screenshot2025 05 21at7 17 36PM Pn](/images/Screenshot2025-05-21at7.17.36PM.png)
 
-All pages should be directing to your main landing page, but if you append `/docs` to the URL, you should see it going to the Mintlify documentation instance.
+## <Icon icon="clock-two" />  Unresponded Messages
 
-## Connecting it with Route53
+Messages that received **no reply** from your AI or team.
 
-Now, we're going to bring the functionality of the Cloudfront distribution into your primary domain.
+- Review and triage these inside the **Conversations** tab
+- High counts here may signal underperformance or misconfigured AI rules
 
-<Note>
-  For this section, you can also refer to AWS's official guide on [Configuring Amazon Route 53 to route traffic to a CloudFront distribution](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-cloudfront-distribution.html#routing-to-cloudfront-distribution-config)
-</Note>
+![Screenshot2025 05 21at7 17 02PM Pn](/images/Screenshot2025-05-21at7.17.02PM.png)
 
-Navigate to [Route53](https://aws.amazon.com/route53) inside the AWS console, and click into the `Hosted zone` for your primary domain. Click on `Create record`
+## <Icon icon="clock-two" />  Filtering by Date
 
-<Frame>
-  
-</Frame>
+Use the date picker in the top-right corner of the dashboard to filter metrics by:
 
-Toggle `Alias` and then **Route traffic to** the `Alias to CloudFront distribution` option.
+- **Daily**
+- **Weekly**
+- **Monthly**
 
-<Frame>
-  
-</Frame>
-
-Click `Create records`.
-
-<Note>
-  You may need to remove the existing A record if one currently exists.
-</Note>
-
-And voila\! You should be able to have your documentation served at `/docs` for your primary domain.
+![Screenshot2025 05 21at7 18 37PM Pn](/images/Screenshot2025-05-21at7.18.37PM.png)
