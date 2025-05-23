@@ -18,7 +18,6 @@
             "pages": [
               "get-started/introduction",
               "get-started/quickstart"
-            
             ]
           },
           {
@@ -28,10 +27,8 @@
               "core-concepts/ai-automation",
               "core-concepts/analytics",
               "core-concepts/dashboard"
-
             ]
           },
-
           {
             "group": "Sales Training",
             "pages": [
@@ -44,34 +41,28 @@
               "sales-training/imessage-sms"
             ]
           }
-            // {
-     //  "tab": "API Reference",
-    //   "groups": [
-     //    {
-    //       "group": "API Documentation",
-     //     "pages": [
-      //    "api-reference/introduction"
-      //    ] 
-      //   },
-       //   {
-      //     "group": "Endpoint Examples",
-      //    "pages": [
-      //      "api-reference/endpoint/get",
-       //     "api-reference/endpoint/create",
-       //    "api-reference/endpoint/delete",
-     //      "api-reference/endpoint/webhook"
-     //      ]
-      //    }
-    //    ]
-   //   },
-             
-
-       //     ]
-       //   }
-          
-    //    ]
-    //  }, //
-    
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "API Documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoint Examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      },
       {
         "tab": "Changelog",
         "groups": [
@@ -81,29 +72,28 @@
               "product-updates/change"
             ]
           }
-          
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "X",
-          "href": "https://x.com/replybluehq",
-          "icon": "bird"
-        },
-        {
-          "anchor": "Linkedin",
-          "href": "https://linkedin.com/company/replyblue",
-          "icon": "poll-people"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
+  },
+  "global": {
+    "anchors": [
+      {
+        "anchor": "X",
+        "href": "https://x.com/replybluehq",
+        "icon": "bird"
+      },
+      {
+        "anchor": "Linkedin",
+        "href": "https://linkedin.com/company/replyblue",
+        "icon": "poll-people"
+      },
+      {
+        "anchor": "Blog",
+        "href": "https://mintlify.com/blog",
+        "icon": "newspaper"
+      }
+    ]
   },
   "logo": {
     "light": "/logo/blue.svg",
