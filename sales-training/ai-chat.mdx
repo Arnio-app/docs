@@ -1,7 +1,7 @@
 ---
-title: 'Using AI in Chats'
-description: 'Guide to enabling AI Replies, configuring response windows and training prompts'
-icon: 'message-bot'
+title: "Using AI in Chats"
+description: "Guide to enabling AI Replies, configuring response windows and training prompts"
+icon: "message-bot"
 ---
 
 ## <Icon icon="bot" /> AI Chat
@@ -9,17 +9,57 @@ icon: 'message-bot'
 **Definition:** The AI Chat handles initial lead engagement by asking qualifying questions, responding to FAQs, and nudging leads toward a booked appointment or human rep.
 
 ### Key Capabilities
+
 - Answers common questions (hours, pricing, team, etc.)
 - Qualifies leads based on customizable criteria
 - Books meetings or escalates to a human if needed
 - Operates 24/7 to maximize conversions
 
 ### Best Practices
+
 - Use clear, simple language in AI prompts
 - Guide the AI with structured flows (e.g. greet → qualify → offer to book)
 - Set handoff logic for edge cases and objections
 
 ### Example Prompts
-```json
-"Hi! Are you looking to speak with someone today, or just browsing?"
-"Can I ask a couple quick questions to help route you to the right person?"
+
+```git
+💬 AI Message 1:
+Hi! 👋 This is Brooke from Radiance Medspa. Thanks for checking us out!
+Are you looking for help with acne, anti-aging, or something else?
+
+👤 Lead Response:
+I’m mostly interested in treating acne scars.
+
+💬 AI Message 2:
+Got it! Acne scar reduction is one of our specialties 🌿
+We typically recommend a microneedling + serum combo — would you like to see before/after results or check pricing?
+
+👤 Lead Response:
+Yeah, show me results.
+
+💬 AI Message 3 (Image + CTA):
+Here’s a few client transformations 👇
+[Image carousel or link]
+📅 We’re offering a free consultation this week — want me to help you book a time?
+
+👤 Lead Response:
+Sure, that’d be great.
+
+💬 AI Message 4:
+Amazing! We have openings this Thursday or Saturday. Which works best for you?
+
+👤 Lead Response:
+Saturday works.
+
+💬 AI Message 5:
+All set — I’ve reserved your consult for Saturday at 11:30 AM! ✅
+We’ll text you a reminder. Let us know if you have any questions before then 💙
+```
+
+## **📘 Why This Works: - KEEP IT SIMPLE \!**
+
+- **Natural language flow** (no robotic tone)
+- Asks **one question at a time** to avoid overwhelm
+- Presents **value** before asking for booking
+- Feels like a real assistant, not a spam bot
